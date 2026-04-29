@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* Element Selector */
+        div {
+            background-color: violet;
+        }
+
+        /* class selector */
+        .red {
+            background-color: red;
+        }
+
+        /* ID selector */
+        #green {
+            background-color: green;
+        }
+
+        /* child selector */
+        div>p {
+            color: chocolate;
+            background-color: brown;
+        }
+
+        /* descendant selector */
+        div p {
+            /* Will apply on child too in contrast to previous */
+            color: chocolate;
+            background-color: brown;
+        }
+
+        /* universal selector */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*All below are pseudo selectors */
+        a:visited {
+            color: black;
+            /* Anchor Link will turn black after visiting  */
+        }
+
+        a:link {
+            color: blue;
+            /* Anchor Link will remain blue before visiting  */
+        }
+
+        a:active {
+            background-color: brown;
+            /* bg will show brown when the link is selected*/
+        }
+
+        a:hover {
+            background-color: chartreuse;
+            /* bg will show brown when cursor put on the anchor link */
+        }
+
+        p:first-child {
+            background-color: bisque;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="one">
+        <p>I am first</p>
+        <p>I am second</p>
+    </main>
+    <br>
+    <div class="red">
+        I am a div
+    </div>
+    <br>
+    <div>
+        I am also a div
+        <br>
+        <p>I am a para inside div</p>
+        <article>
+            <br>
+            <!-- Not a child -->
+            <p>I am a para inside div</p>
+        </article>
+    </div>
+    <br>
+    <div id="green">
+        I am third a div
+    </div>
+    <a href="https://github.com" target="_blank">Go to github</a>
+</body>
+
+</html>
