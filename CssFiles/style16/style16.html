@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        /* .box:first-child{
+            background-color: red;
+        }
+        .box::first-line{
+            color: rgb(204, 176, 139);
+        } */
+        .boxes * {
+            color: darkred;
+            border: 2px solid black;
+        }
+
+        /* p,
+        a,
+        .box,
+        [data-color="primary"] {
+            padding-top: 45px;
+        } */
+        .box:nth-child(even) {
+            background-color: aqua;
+        }
+
+        .boxes::before {
+            content: "I am Mutayib";
+            color: chartreuse;
+        }
+
+        .boxes::after {
+            content: "I am Abdullah";
+            color: cadetblue;
+            display: block;
+        }
+
+        ::selection {
+            background-color: #c05a5a;
+            color: darkolivegreen;
+        }
+
+        .box::first-letter {
+            color: peru;
+            font-size: 77px;
+        }
+
+        input::placeholder {
+            color: rgb(35, 54, 150);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">Hey I am a Box
+        </div>
+        <div class="box">Hey I am a Box</div>
+        <div class="box">Hey I am a Box</div>
+        <input type="text" name="" id="" placeholder="Type your name here">
+    </div>
+</body>
+
+</html>
