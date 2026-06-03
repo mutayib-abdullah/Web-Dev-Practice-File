@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grids</title>
+    <style>
+        .container {
+            border: 2px solid rgb(0, 0, 0);
+            display: grid;
+            grid-template-columns: [pehla] 120px [doosra] 100px [t];
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            /* grid-template-columns: repeat(4, 1fr); char bar repeat kro 1fr ko*/
+            /* grid-template-columns: repeat(4,minmax(100px, 1fr)); */
+            grid-template-rows: 100px 100px 100px;
+
+            grid-template-areas: "nav nav nav"
+                "side article article"
+                 "footer footer footer";
+                 gap: 34px;
+                 row-gap: 10px;
+                 column-gap: 15px;
+                 /* justify-items: center;
+                 align-items: center; */
+        }
+
+        .item {
+            border: 2px solid blue;
+            /* width: 55px; */
+            /* height: 55px; */
+        /* } */
+
+        /* .item-4{ */
+        /* grid-column: 1/2; */
+        /* grid-column: pehla/t;
+            grid-row: 1/2;
+            similar: */
+        /* grid-row-start: 1;
+            grid-row-end: 2; */
+        }
+
+        /* .item-1{
+            grid-column: 1/2;
+            grid-row: 1/2;
+        } */
+        .item-1 {
+            grid-area: nav;
+            background-color: red;
+        }
+
+        .item-2 {
+            grid-area: side;
+            background-color: rgb(95, 95, 116);
+
+        }
+
+        .item-3 {
+            grid-area: article;
+            background-color: green;
+
+        }
+
+        .item-4 {
+            grid-area: footer;
+            background-color: brown;
+
+
+        }
+        .item-5 {
+            grid-area: footer;
+            background-color: rgb(116, 25, 142);
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4 item-4">4</div>
+        <div class="item item-5">5</div>
+    </div>
+</body>
+
+</html>
