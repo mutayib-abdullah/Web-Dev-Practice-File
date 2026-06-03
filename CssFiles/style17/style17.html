@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        .container {
+            border: 2px solid red;
+            display: flex;
+            height: 80vh;
+            /* justify-content: center; */
+            /* align-items: center; */
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* align-content: center; */
+            flex-flow: row wrap;
+            /* row-gap: 20px;
+            column-gap: 40px; */
+            gap: 20px 40px;
+            align-self: flex-end ;
+        }
+
+        .item {
+            flex-grow: 1;
+            width: 92px;
+            height: 62px;
+            background-color: 
+            blueviolet;
+            margin: 4px;
+            border: 2px solid black;
+        }
+        .order-1{
+            order:1;
+        }
+        .order-2{
+            order:2;
+        }
+        .order-3{
+            order:3;
+        }
+        .item{
+            flex-grow: 2;
+            flex-shrink: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item order-1">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item order-2">8</div>
+        <div class="item">9</div>
+    </div>
+</body>
+
+</html>
